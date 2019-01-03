@@ -3,19 +3,19 @@
 	"TimeOver"
 	{
 		"en"		"Time limit reached."
-		"ru"		"Достигнут лимит времени."
+		"ru"		"Превышен лимит времени."
 		"pt"		"Tempo limite alcançado."
 	}
 	"RandomTR"
 	{
 		"en"		"Random terrorist chosen."
-		"ru"		"Выбор рандомного террориста."
+		"ru"		"Выбран рандомный террорист."
 		"pt"		"Terrorista escolhido aleatoriamente."
 	}
 	"KillPrevent"
 	{
 		"en" 		"Kill command disabled."
-		"ru" 		"Команда самоубийства отключена."
+		"ru" 		"Самоубийство запрещено."
 		"pt" 		"Comando kill desativado."
 	}
 	"Cant Change"
@@ -27,7 +27,7 @@
 	"Team Limit"
 	{
 		"en"		"***Terrorist Team Limited to 1 player***"
-		"ru"		"***Команда террористов ограничена 1 игроком***"
+		"ru"		"***Команда террористов ограничена на 1 игрока***"
 		"pt"		"***Time terrorista limitado a 1 jogador***"
 	}
 }
