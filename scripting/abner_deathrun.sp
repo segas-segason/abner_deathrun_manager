@@ -228,7 +228,7 @@ public Action TimeKill(Handle timer)
 			DealDamage(i, life, 0,(1 << 1));
 		}
 	}
-	CPrintToChatAll("{green}[AbNeR DeathRun] {default}%t", "TimeOver");
+	CPrintToChatAll("{green}[DEATHRUN] {default}%t", "TimeOver");
 	return Plugin_Continue;
 }
 
@@ -340,7 +340,7 @@ public void NewRandomTR()
 	if(IsValidClient(client))
 	{
 		ChangeTeam(client, 2);
-		CPrintToChatAll("{green}[AbNeR DeathRun]{default} %t", "RandomTR");
+		CPrintToChatAll("{green}[DEATHRUN]{default} %t", "RandomTR");
 	}
 }
 
@@ -427,7 +427,7 @@ public Action Suicide(int client, const char[] command, int args)
 	if(GetConVarInt(g_Enabled) != 1)
 		return Plugin_Continue;
 		
-	CPrintToChat(client, "{green}[AbNeR DeathRun] {default}%t.", "KillPrevent");
+	CPrintToChat(client, "{green}[DEATHRUN] {default}%t.", "KillPrevent");
 	return Plugin_Handled;
 }
 
