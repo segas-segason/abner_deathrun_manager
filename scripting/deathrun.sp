@@ -22,7 +22,7 @@ Handle g_TRSpeed;
 
 public Plugin myinfo =
 {
-	name = "[CSS/CS:GO] AbNeR DeathRun Manager",
+	name = "[CSS/CS:GO] DeathRun Manager",
 	author = "AbNeR_CSS",
 	description = "Deathrun manager",
 	version = PLUGIN_VERSION,
@@ -36,13 +36,13 @@ public void OnPluginStart()
 	AutoExecConfig(true, "abner_deathrun");
 	
 	LoadTranslations("common.phrases");
-	LoadTranslations("abner_deathrun.phrases");
+	LoadTranslations("deathrun.phrases");
 	
-	g_Enabled 				= CreateConVar("dr_enabled", "1", "Enable or Disable the Plugin.");
-	g_TrKills 			    = CreateConVar("dr_tr_kills", "1", "Give kills to terrorists.");
-	g_killTRFrag 			= CreateConVar("dr_kill_tr_frag", "10", "Frags gives to cts who kills terrorists");
-	g_TimeLimit			    = CreateConVar("dr_time_limit", "1", "Kill alive cts if round time ends.");
-	g_TRSpeed 				= CreateConVar("dr_tr_speed", "1.0", "Terrorist speed, 1.0 to default speed.");
+	g_Enabled 				= CreateConVar("dr_enabled", "1", "Вкл/Выкл плагин.");
+	g_TrKills 			    = CreateConVar("dr_tr_kills", "1", "Дать террористам убивать себя.");
+	g_killTRFrag 			= CreateConVar("dr_kill_tr_frag", "10", "Сколько фрагов получает контртеррорист за убийство террориста");
+	g_TimeLimit			    = CreateConVar("dr_time_limit", "1", "Убить живого контртеррориста, если закончилось время раунда.");
+	g_TRSpeed 				= CreateConVar("dr_tr_speed", "1.0", "Скорость террориста. По умолчанию: 1.0.");
 	
 	AddCommandListener(JoinTeam, "jointeam");
 	AddCommandListener(Suicide, "kill");
