@@ -33,7 +33,7 @@ public Plugin myinfo =
 public void OnPluginStart()
 {  
 	CreateConVar("abner_deathrun_version", PLUGIN_VERSION, "Plugin Version", FCVAR_NOTIFY|FCVAR_REPLICATED);
-	AutoExecConfig(true, "abner_deathrun");
+	AutoExecConfig(true, "deathrun");
 	
 	LoadTranslations("common.phrases");
 	LoadTranslations("deathrun.phrases");
