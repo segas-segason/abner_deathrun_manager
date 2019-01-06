@@ -15,6 +15,10 @@ A plugin with features to automate your DeathRun Server.
 - Extra frag by kill terrorists.
 - Kill alive cts if round time ends.
 
+# Требования
+
+https://github.com/segas-segason/Multi-Colors
+
 # Configuration
 - Set your custom configs in abner_deathrun.cfg that will be automatically created in [cfg/sourcemod/] after first run.
 
