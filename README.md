@@ -1,8 +1,6 @@
-# [CSS/CS:GO] AbNeR DeathRun Manager
+# abner_deathrun_manager_ru
 
-A plugin with features to automate your DeathRun Server.
-
-# Compatible Games
+# Поддерживаемые игры
 - Counter-Strike: Source
 - Counter-Strike Global Offensive
 
