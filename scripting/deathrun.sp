@@ -2,13 +2,15 @@
 #include <sdktools>
 #include <sdkhooks>
 #include <cstrike>
-#include <multicolors>
+#include <colors>
 
 #pragma semicolon 1
-#define PLUGIN_VERSION "2.7"
+#define PLUGIN_VERSION "2.7.2"
 #pragma newdecls required
 
 #define TRCONDITIONS GetTeamClientCount(2) == 0  && GetTeamClientCount(3) > 1
+
+#define SERVER_TAG "[Deathrun]"
 
 bool jaTR[MAXPLAYERS+1] = false;
 Handle roundTime = INVALID_HANDLE;
@@ -228,7 +230,7 @@ public Action TimeKill(Handle timer)
 			DealDamage(i, life, 0,(1 << 1));
 		}
 	}
-	CPrintToChatAll("{green}[DEATHRUN] {default}%t", "TimeOver");
+	CPrintToChatAll(" {green}%s {default}%t", SERVER_TAG, "TimeOver");
 	return Plugin_Continue;
 }
 
@@ -340,7 +342,7 @@ public void NewRandomTR()
 	if(IsValidClient(client))
 	{
 		ChangeTeam(client, 2);
-		CPrintToChatAll("{green}[DEATHRUN]{default} %t", "RandomTR");
+		CPrintToChatAll(" {green}%s {default}%t", SERVER_TAG, "RandomTR");
 	}
 }
 
@@ -427,7 +429,7 @@ public Action Suicide(int client, const char[] command, int args)
 	if(GetConVarInt(g_Enabled) != 1)
 		return Plugin_Continue;
 		
-	CPrintToChat(client, "{green}[DEATHRUN] {default}%t.", "KillPrevent");
+	CPrintToChat(client, " {green}%s {default}%t", SERVER_TAG, "KillPrevent");
 	return Plugin_Handled;
 }
 
